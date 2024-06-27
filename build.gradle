@@ -8,8 +8,10 @@ version = '0.0.1-dev'
 
 defaultTasks 'run'
 
+mainClassName = 'ru.ulstu.is.Inference'
+
 application {
-    mainClass = 'ru.ulstu.is.swrlf.App'
+    mainClass = mainClassName
 }
 
 assert System.properties['java.specification.version'] == '17' || '21'
@@ -36,4 +38,16 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "${mainClassName}"
+    }
+    archiveBaseName = "${rootProject.name}"
+    tasks.withType(Jar){
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
