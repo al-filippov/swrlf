@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://is.ulstu.ru/fuzzy"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://is.ulstu.ru/fuzzy">
+    <Prefix name="" IRI="http://is.ulstu.ru/fuzzy/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="#fuzzyInference"/>
+        <Literal>Mamdani</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Fluid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FluidFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FluidInflux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FluidLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFluidFlow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFluidInflux"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFluidLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fluidFlow"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fluidInflux"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fluidLevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidFlowHigh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidFlowLow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidFlowMiddle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidInfluxHigh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidInfluxLow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidInfluxMiddle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidLevelHigh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidLevelLow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FluidLevelMiddle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#object"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInference"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInferenceActivation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInferenceConjunction"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInferenceDisjunction"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInferenceImplication"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyInputVariable"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyMembership"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyOutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyOutputVariableAggregation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyOutputVariableDefuzzifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyVariableMaximum"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#fuzzyVariableMinimum"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#FluidFlow"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#FluidFlowHigh"/>
+            <NamedIndividual IRI="#FluidFlowLow"/>
+            <NamedIndividual IRI="#FluidFlowMiddle"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FluidInflux"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#FluidInfluxHigh"/>
+            <NamedIndividual IRI="#FluidInfluxLow"/>
+            <NamedIndividual IRI="#FluidInfluxMiddle"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FluidLevel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#FluidLevelHigh"/>
+            <NamedIndividual IRI="#FluidLevelLow"/>
+            <NamedIndividual IRI="#FluidLevelMiddle"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#FluidFlow"/>
+        <Class IRI="#Fluid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FluidInflux"/>
+        <Class IRI="#Fluid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FluidLevel"/>
+        <Class IRI="#Fluid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Class IRI="#FluidFlow"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Class IRI="#FluidInflux"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Class IRI="#FluidLevel"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#fluidFlow"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#fluidInflux"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#fluidLevel"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#fluidFlow"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#fluidInflux"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#fluidLevel"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Fluid"/>
+        <Class IRI="#Object"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FluidFlow"/>
+        <Class IRI="#FluidInflux"/>
+        <Class IRI="#FluidLevel"/>
+    </DisjointClasses>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fluidFlow"/>
+        <NamedIndividual IRI="#object"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fluidLevel"/>
+        <NamedIndividual IRI="#object"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.5</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFluidFlow"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFluidInflux"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFluidLevel"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFluidFlow"/>
+        <Class IRI="#FluidFlow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFluidInflux"/>
+        <Class IRI="#FluidInflux"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFluidLevel"/>
+        <Class IRI="#FluidLevel"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#fluidFlow"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#fluidInflux"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#fluidLevel"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fluidFlow"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fluidInflux"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fluidLevel"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#fluidFlow"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fluidInflux"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fluidLevel"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelHigh"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowHigh"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxMiddle"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelLow"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowHigh"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxHigh"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelMiddle"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowHigh"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxHigh"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S9</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelHigh"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowLow"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxLow"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelLow"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowLow"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxMiddle"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S6</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelMiddle"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowLow"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxMiddle"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S8</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelHigh"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowMiddle"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxLow"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelLow"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowMiddle"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxHigh"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidLevel"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidLevelMiddle"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidFlow"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidFlowMiddle"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasFluidInflux"/>
+                <Variable IRI="/o"/>
+                <NamedIndividual IRI="#FluidInfluxMiddle"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidFlowHigh</IRI>
+        <Literal>fluidFlow,SShape,0.3,0.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidFlowLow</IRI>
+        <Literal>fluidFlow,ZShape,0.2,0.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidFlowMiddle</IRI>
+        <Literal>fluidFlow,Trapezoid,0.15,0.25,0.35,0.45</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidInfluxHigh</IRI>
+        <Literal>fluidInflux,SShape,0.35,0.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidInfluxLow</IRI>
+        <Literal>fluidInflux,ZShape,0.2,0.25</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidInfluxMiddle</IRI>
+        <Literal>fluidInflux,Trapezoid,0.20,0.25,0.35,0.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidLevelHigh</IRI>
+        <Literal>fluidLevel,SShape,6.0,8.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidLevelLow</IRI>
+        <Literal>fluidLevel,ZShape,2.0,4.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <IRI>#FluidLevelMiddle</IRI>
+        <Literal>fluidLevel,Trapezoid,2.0,4.0,6.0,8.0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyInputVariable"/>
+        <IRI>#fluidFlow</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyOutputVariable"/>
+        <IRI>#fluidInflux</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyVariableMaximum"/>
+        <IRI>#fluidInflux</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyVariableMinimum"/>
+        <IRI>#fluidInflux</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#fuzzyInputVariable"/>
+        <IRI>#fluidLevel</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyInference"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyInferenceActivation"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyInferenceConjunction"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyInferenceDisjunction"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyInferenceImplication"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyMembership"/>
+        <AbbreviatedIRI>xsd:decimal</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyOutputVariableAggregation"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyOutputVariableDefuzzifier"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyTerm"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyVariableMaximum"/>
+        <AbbreviatedIRI>xsd:decimal</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="#fuzzyVariableMinimum"/>
+        <AbbreviatedIRI>xsd:decimal</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

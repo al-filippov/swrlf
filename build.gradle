@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ru.ulstu.is'
+version = '0.0.1-dev'
+
+defaultTasks 'run'
+
+application {
+    mainClass = 'ru.ulstu.is.swrlf.App'
+}
+
+assert System.properties['java.specification.version'] == '17' || '21'
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.sourceforge.owlapi:owlapi-osgidistribution:4.5.26'
+    implementation 'edu.stanford.swrl:swrlapi-drools-engine:2.1.2'
+    implementation 'com.fuzzylite:jfuzzylite:6.0.1'
+
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+    implementation 'org.modelmapper:modelmapper:3.2.0'
+    
+    implementation 'ch.qos.logback:logback-classic:1.5.3'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
